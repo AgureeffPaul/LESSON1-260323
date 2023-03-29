@@ -40,3 +40,4 @@ int maxDigit = firstDigit > secondDigit ? firstDigit : secondDigit;
 return MaxDigit;
 
 }
+
