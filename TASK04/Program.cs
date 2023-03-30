@@ -18,21 +18,21 @@ if (number1 == number2 && number2 == number3)
 }
 
 
-// if (number1 > number2)
-//     {
-//         int max = number1;
-//     }
+if (number2 > max)
+{
+    int max = number2;
+}
 
-// else if (number2 > number3)
-//         {
-//             int max = number2;
-//         }
-// else
-//         {
-//             int max = number3;
-//         }
+else if (number3 > max)
+{
+    int max = number3;
+}
+else
+{
+    int max = number1;
+}
 
-// Console.WriteLine($"Максимальное число : {max}"); // Выводим максимум
+Console.WriteLine($"Максимальное число : {max}"); // Выводим максимум
 
 
 
