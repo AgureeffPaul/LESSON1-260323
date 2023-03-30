@@ -46,6 +46,6 @@ else if (day == "7")
 else
 {
 
-    Console.WriteLine("Да Вы Шалун! ;))))");    
+    Console.WriteLine("Да Вы Шалун! ");    
 }
 
