@@ -5,18 +5,18 @@
 // 782 -> 72
 // 918 -> 98
 
-int numRandom = new Random().Next(100,1000);
+int numRandom = new Random().Next(100, 1000);
 Console.WriteLine($"Случайное число из диапазона 100-999 => {numRandom}");
 
-int newNum = DelSecondDigit (numRandom);
+int newNum = DelSecondDigit(numRandom);
 Console.WriteLine($"Новое двузначное число: {newNum}");
 
-int DelSecondDigit (int randomNuber)
+int DelSecondDigit(int randomNuber)
 
 {
-    int firstNumber = randomNuber/100;
-    int thirdNumber = randomNuber%10;
-    int newNumber = firstNumber*10+thirdNumber;
+    int firstNumber = randomNuber / 100;
+    int thirdNumber = randomNuber % 10;
+    int newNumber = firstNumber * 10 + thirdNumber;
     return newNumber;
 
 }
