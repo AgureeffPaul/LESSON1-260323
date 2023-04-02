@@ -14,8 +14,11 @@ int firstnum = int.Parse(Console.ReadLine());
 Console.WriteLine($"Введите второе число для деления:");
 int secondnum = int.Parse(Console.ReadLine());
 
-bool MultipleTwoNumbers (int number, int firstnumber, int secondnumber)
+bool result = IsMultipleTwoNumbers (num, firstnum, secondnum);
+Console.WriteLine(result ? "Число кратное данным числам" : "Число некратное данным числам");
+
+bool IsMultipleTwoNumbers (int number, int firstNumber, int secondNumber)
 {
-    return number % firstnumber ==0 && number % secondNumber;
+    return number % firstNumber == 0 && number % secondNumber ==0;
 }
 
