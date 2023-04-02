@@ -12,11 +12,12 @@ int firstnum = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите число 2:");
 int secondnum = int.Parse(Console.ReadLine());
 
-bool result = IfFirstSquareSecond (firstnum, secondnum);
+bool result = IsFirstSquareSecond (firstnum, secondnum);
 
-String = result ? ("Одно число является квадратом другого" : "Число не является квадратом другого");
+String res = result ? "Одно число является квадратом другого" : "Число не является квадратом другого";
+Console.WriteLine(res);
 
-bool IfFirstSquareSecond (int firstNumber, int secondNumber)
+bool IsFirstSquareSecond (int firstNumber, int secondNumber)
 {
-    return (firstNumber == secondNumber * secondNumber || secondNumber * firstNumber);
+    return firstNumber == secondNumber * secondNumber || secondNumber == firstNumber * firstNumber;
 }
