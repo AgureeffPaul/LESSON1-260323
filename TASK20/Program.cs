@@ -15,13 +15,17 @@ int xPoint2 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Y :");
 int yPoint2 = Convert.ToInt32(Console.ReadLine());
 
-double numRound = Math.Round(dist, 2, MidpointRounding.ToZero);
+double d = Math.Sqrt(5);
+double num = 5.09987565655;
+double numRound = Math.Round(num, 2, MidpointRounding.ToZero);
 
-Console.WriteLine($"Расстояние между точками равно : {numRound}");
+double findDistance = FindDistance(xPoint1, yPoint1, xPoint2, yPoint2);
+Console.WriteLine($"Расстояние между точками равно : {findDistance}");
 
 
-double Distance (int x1, int y1, int x2, int y2)
+double FindDistance(int x1, int y1, int x2, int y2)
 {
-    double dist = Math.Sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+    double dist = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+    dist = Math.Round(dist, 2, MidpointRounding.ToZero);
     return dist;
 }
