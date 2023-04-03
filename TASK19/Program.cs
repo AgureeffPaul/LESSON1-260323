@@ -8,46 +8,10 @@
 
 // 23432 -> да
 
-Console.WriteLine("Введите количество знаков палиндрома");
-int countNumber = Convert.ToInt32(Console.ReadLine()); 
+int fiveNumbers = InputInt("Введите пятизначное число :", 10000, 99999);
 
-int num = PowerOfTen (countNumber);
-Console.WriteLine(num);
-
-int correctNumber = GetUserData (countNumber);
-
-Console.WriteLine($"Введено число {correctNumber}");
-
-int age = InputInt("Enter your age:", 0, 120);
-
-
-
-
-
-
-int GetUserData(int countNum) // Ввод данных с проверкой
-{
-    int newNumber = Convert.ToInt32(Console.ReadLine());
-
-    while (newNumber < num || newNumber > num * 10)
-    {
-        Console.WriteLine("Введите пятизначное число для проверки на палиндром");
-        newNumber = Convert.ToInt32(Console.ReadLine());
-    }
-    return newNumber;
-}
-
-int PowerOfTen(int n) // Расчет 10 в степени n
-{
-    int result = 1;
-
-    for (int i = 0; i < n; i++)
-    {
-        result *= 10;
-    }
-
-    return result;
-}
+bool result = Palindrom(fiveNumbers);
+Console.WriteLine(result ? "Да. Это число - палиндром" : "Нет. Это число - не палиндром");
 
 static int InputInt(string prompt, int minValue, int maxValue) // Блок сбора данных с проверкой
 {
@@ -57,10 +21,19 @@ static int InputInt(string prompt, int minValue, int maxValue) // Блок сб�
 
     while (!isValidInput || value < minValue || value > maxValue)
     {
-        Console.WriteLine($"Invalid input. Please enter a value between {minValue} and {maxValue}.");
+        Console.WriteLine($"Введено не пятизначное число. Пожалуйста, введите число в диапазоне от {minValue} до {maxValue}.");
         Console.Write(prompt);
         isValidInput = int.TryParse(Console.ReadLine(), out value);
     }
 
     return value;
+}
+
+bool Palindrom(int fiveNum)
+{
+    int num1 = fiveNum / 10000;
+    int num2 = (fiveNum / 1000) % 10;
+    int num4 = (fiveNum / 10) % 10;
+    int num5 = fiveNum % 10;
+    return num1 == num5 && num2 == num4;
 }
