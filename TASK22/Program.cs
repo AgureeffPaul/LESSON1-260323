@@ -31,7 +31,7 @@
 
 string Spreadsheet(int nNum)
 {
-    string spreadsheetResult = "____________\n";
+    string spreadsheetResult = "____________\n"; // Возврат каретки
     for (int i = 1; i <= nNum; i++)
     {
         spreadsheetResult = spreadsheetResult + $"|{i,5}|{i * i,5}| \n";
@@ -46,29 +46,29 @@ int n = Convert.ToInt32(Console.ReadLine());
 string result = Spreadsheet(n);
 Console.Write(result);
 
-// Methode 2
+// // Methode 2
 
-int GetUserData()
-{
-    int newNumber = Convert.ToInt32(Console.ReadLine());
+// int GetUserData()
+// {
+//     int newNumber = Convert.ToInt32(Console.ReadLine());
 
-    while (newNumber <= 0)
-    {
-        Console.WriteLine("Введите число больше 0");
-        newNumber = Convert.ToInt32(Console.ReadLine());
-    }
-    return newNumber;
-}
+//     while (newNumber <= 0)
+//     {
+//         Console.WriteLine("Введите число больше 0");
+//         newNumber = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return newNumber;
+// }
 
-void Square(int userNumber)
-{
-    for (int i = 1; i <= userNumber; i++)
-    {
-        Console.WriteLine($"|{i,3} | {i * i,3}|");
-    }
-}
+// void Square(int userNumber)
+// {
+//     for (int i = 1; i <= userNumber; i++)
+//     {
+//         Console.WriteLine($"|{i,3} | {i * i,3}|");
+//     }
+// }
 
-Square(GetUserData());
+// Square(GetUserData());
 
 
-sqrt((x2-x1)^2+(y2-y1)^2+(z2-z1)^2)
+// sqrt((x2-x1)^2+(y2-y1)^2+(z2-z1)^2)
