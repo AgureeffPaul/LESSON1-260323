@@ -48,7 +48,7 @@ if (result == true)
     Console.Write($"Его значение : {resultArray[mElement, nElement]}");
 }
 
-int EnterCorrectPlease(int corr)
+int EnterCorrectPlease(int corr) // Однозначно правильный ВВОД данных в цикле
 {
     Console.WriteLine("Введён неверный параметр. Значение должно быть больше нуля.");
     while (corr <= 0)
@@ -87,7 +87,7 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-bool ControlElements(int mElements, int nElements, int mM, int nN)
+bool ControlElements(int mElements, int nElements, int mM, int nN) // Проверка на принадлежность массиву
 {
     return mElements < mM && nElements < nN;
 }
