@@ -20,6 +20,7 @@ int totalResult = SummOfDigitsOfNumber(number);
 Console.WriteLine(totalResult);
 int SummOfDigitsOfNumber(int num)
 {
-    if (num == 0) return 0;
-    else return num%10+SummOfDigitsOfNumber(num/10);
+    return num == 0 ? 0 : num%10+SummOfDigitsOfNumber(num/10); // 453  - 45 - 4 
+    // if (num == 0) return 0;
+    // else return num%10+SummOfDigitsOfNumber(num/10);
 }
