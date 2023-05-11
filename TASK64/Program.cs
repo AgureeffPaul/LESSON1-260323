@@ -6,12 +6,16 @@
 Console.Write("Введите значение N: ");
 int N = Convert.ToInt32(Console.ReadLine());
 
-if (N > 0) PrintRange(N);
+if (N > 0) 
+{
+    Console.WriteLine($"Все натуральные числа в промежутке от {N} до 1 :");
+    PrintRange(N);
+}
 else Console.WriteLine("Некорректный ввод!");
 
 void PrintRange(int num)
 {
-    if (num > 0)
+    if (num > 1)
     {
         Console.Write(num + ", ");
         PrintRange(num - 1);
