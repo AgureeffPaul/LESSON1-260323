@@ -7,19 +7,31 @@ Console.Write("Введите значение M: ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите значение N: ");
 int n = Convert.ToInt32(Console.ReadLine());
-int sum = SumRange(m, n);
-
-Console.WriteLine("Сумма натуральных элементов: " + sum);
-    
-int SumRange(int start, int end) 
+if ((m > 0) && (n > 0) && (m < n))
 {
-    if (end == start) 
+int sum = SumRange(m, n);
+Console.WriteLine($"Сумма натуральных элементов в промежутке от {m} до {n}: " + sum);
+}
+else if ((m > 0) && (n > 0) && (m > n))
+{
+    int m1 = m;
+    m = n;
+    n = m1;
+
+int sum = SumRange(m, n);
+Console.WriteLine($"Сумма натуральных элементов в промежутке от {m} до {n}: " + sum);
+}
+else Console.WriteLine("Некорректный ввод! Введено не натуральное число.");
+
+int SumRange(int mM, int nN) 
+{
+    if (nN == mM) 
     {
-    return end;
+    return nN;
     }
     else 
     {
-    return start + SumRange(start + 1, end);
+    return mM + SumRange(mM + 1, nN);
     }
 }
 
